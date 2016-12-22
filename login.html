@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet"  href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
+</head>
+<body style="background: #f9f7f7;" my-js="js/app/login.js">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="#">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="loginBox">
+            <div class="loginBox_img">
+                <img src="images/login_bg.jpg" >
+            </div>
+            <div class="loginBox_login">
+                <p class="login_title">登录</p>
+                <div class="login_name">
+                    <span><i class="icon-mobile"></i></span>
+                    <input type="text" name="username" id="username" value="" placeholder="请输入用户名">
+                </div>
+                <div class="login_password">
+                    <span><i class="icon-password"></i></span>
+                    <input type="password" name="password" id="password" value="" placeholder="请输入密码">
+                </div>
+                <div class="login_self">
+						<span class="login_selfLoad fl">
+							<input type="checkbox" checked="" id="checked">
+							<em class="fr">自动登录</em>
+						</span>
+                    <a href="#" class="login_forget fr">忘记密码</a>
+                </div>
+                <div class="login_btn">
+                    <a id="loginBtn" href="javascript:void(0)">登录</a>
+                </div>
+                <div class="go_register">
+                    <a href="register.html">>>去注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="position: fixed;bottom:0;">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+
+</body>
+</html>

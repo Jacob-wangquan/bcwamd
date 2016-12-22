@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet"  href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+</head>
+<body style="background: #f0f0f0">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="../images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="login.html">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="userBox clearfix">
+        <div class="userMenu fl">
+            <p class="userMenu_title">
+                <i class="icon-phone"></i>
+                <span>个人中心</span>
+            </p>
+            <div id="accordion">
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>仓库管理</span>
+                </h3>
+                <div class="accordion-item userMenu_release">
+                    <a href="user_releasedwh.html">发布的仓库</a>
+                    <a href="#">我的预定</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>我的收藏</span>
+                </h3>
+                <div  class="accordion-item userMenu_collect">
+                    <a href="#">收藏的仓库</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>用户信息</span>
+                </h3>
+                <div  class="accordion-item userMenu_userInfo">
+                    <a href="#">我的资料</a>
+                    <a href="#">修改密码</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>消息中心</span>
+                </h3>
+                <div  class="accordion-item userMenu_news">
+                    <a href="#">未读消息</a>
+                    <a href="#">已读消息</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>账户管理</span>
+                </h3>
+                <div  class="accordion-item userMenu_account">
+                    <a href="#">我的账户</a>
+                    <a href="#">账户充值</a>
+                    <a href="#">我的订单</a>
+                    <a href="#">体现</a>
+                    <a href="#">交易记录</a>
+                    <a href="#">账户设置</a>
+                </div>
+            </div>
+        </div>
+        <div class="userContent fr">
+            <p class="userContent_title">发布的仓库</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jqueryUI.1.10.4.js"></script>
+    <script>
+        $(function () {
+            $( "#accordion" ).accordion();
+//            控制各个面板的高度
+            $('.userMenu_release').css('height','64px');
+            $('.userMenu_collect').css('height','32px');
+            $('.userMenu_userInfo').css('height','64px');
+            $('.userMenu_news').css('height','64px');
+        });
+    </script>
+</body>
+</html>

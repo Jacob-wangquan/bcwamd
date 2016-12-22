@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet"  href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/jquery.inputbox.css">
+    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
+</head>
+<body style="background: #f9f7f7;" my-js="js/app/register.js">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="#">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" style="height:auto;">
+        <div class="loginBox" style="overflow: hidden;">
+            <div class="loginBox_img fl">
+                <img src="images/login_bg.jpg" >
+            </div>
+            <div class="registerBox">
+                <p class="register_title">
+                    <span class="register_title1">注册</span>
+                    <a class="go_login fr" href="login.html">去登录</a>
+                    <span class="register_title2 fr">已有账号?</span>
+                </p>
+                <div class="registerBar">
+                    <span>公司名称</span>
+                    <div class="reg_input fr">
+                        <input id="companyName" type="text" placeholder="请输入公司名称">
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>公司区域</span>
+                    <div class=" fr reg_input_area">
+                        <div id="test1" style="float:left;height:200px;">
+                            <input type="hidden" class="province" value="010000"/>
+                            <input type="hidden" class="city" value="010100"/>
+                            <input type="hidden" class="area" value="010101"/>
+                            <div name="province" id="province" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="city" id="city" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="area" id="area" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>详细地址</span>
+                    <div class="reg_input fr">
+                        <input id="detailAddress" type="text" placeholder="请输入仓库具体地址">
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>手机号</span>
+                    <div class="reg_input fr">
+                        <input id="mobile" type="text" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>验证码</span>
+                    <div class=" fr reg_input_validate">
+                        <input id="validateCode" type="text" placeholder="请输入验证码">
+                        <span>验证码</span>
+                        <span class="refresh">
+                            <i class="icon-refresh"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>短信验证码</span>
+                    <div class=" fr reg_input_validate">
+                        <input id="validateMessage" type="text" placeholder="请输入短信验证码">
+                        <a id="getValidate" class="getValidate" href="javascript:void(0)">获取验证码</a>
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>初始密码</span>
+                    <div class="reg_input fr">
+                        <input id="password" type="text" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>确认密码</span>
+                    <div class="reg_input fr">
+                        <input id="passwordAgain" type="text" placeholder="请再次输入密码">
+                    </div>
+                </div>
+                <div class="registerBar">
+                    <span>营业执照</span>
+                    <div class="uploadBox fr">
+                        <input id="license" class="reg_input_validate" type="file" value="上传营业执照">
+                        <div class="license">
+                            <span class="license_icon">
+                                <i class="icon-plus"></i>
+                            </span>
+                            <span>上传公司营业执照</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="signBar">
+                    <input class="fl" type="checkbox" checked="" id="checked">
+                    <em class="fl">我同意<a class="userPaper" href="javascript:void(0)">《用户协议》</a></em>
+                </div>
+                <a id="registerBtn" class="registerBtn" href="javascript:void(0)">注册</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="position: fixed;bottom:0;">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+
+</body>
+</html>

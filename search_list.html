@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/jquery.vector-map.css">
+    <link rel="stylesheet" href="css/jquery.inputbox.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
+    <style>
+        .condition_select{color:#f69402;}
+    </style>
+</head>
+<body style="background: #f9f7f7;" my-js="js/app/search_list.js">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="login.html">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner_search">
+        <div class="bannerBox"></div>
+    </div>
+    <div class="search_content">
+        <!--选择条件-->
+        <div class="conditionBox">
+            <ul class="conditionBox_Ul"  style="position: relative;">
+                <li class="conditionBox_Li locationSelect" style="position: absolute; top:20px; left:20px;">
+                    <div class="conditionBox_Li_title fl">
+                        <i class="icon-location"></i>
+                        <span>仓库位置</span>
+                    </div>
+                    <div class="conditionBox_Li_condition fr" >
+                        <div id="test1" style="float:left;height:200px;">
+                            <input type="hidden" class="province" value="010000"/>
+                            <input type="hidden" class="city" value="010100"/>
+                            <input type="hidden" class="area" value="010101"/>
+                            <div name="province" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="city" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="area" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--动态添加-->
+                <!--<li class="conditionBox_Li">-->
+                    <!--<div class="conditionBox_Li_title fl">-->
+                        <!--<i class="icon-location"></i>-->
+                        <!--<span>可存货物</span>-->
+                    <!--</div>-->
+                    <!--<div class='conditionBox_Li_condition fr Li_condition_goods'>-->
+
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <!--选择列表-->
+        <div class="search_list_bar">
+            <div class="search_list_title fl">
+                <span>价格</span>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <div class="search_list_title fl">
+                <span>百仓网评级</span>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <div class="search_list_title fl">
+                <span>用户评分</span>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <div class="search_list_title fl">
+                <span>安防等级</span>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <div class="search_list_title fl">
+                <span>周边城市</span>
+                <i class="icon-arrow-down"></i>
+            </div>
+            <p class="searchOut fr">一共搜出<span>100</span>个仓库！</p>
+        </div>
+        <!--列表-->
+        <div class="search_list_box">
+            <ul>
+                <li class="searchList">
+                    <div class="searchList_left fl">
+                        <div class="searchList_left_up">
+                            <img src="images/wh_1.jpg">
+                        </div>
+                        <div class="searchList_left_down">
+                            <input class="threeD" value="3D仓"  readonly="readonly" >
+                            <input class="overAll" data-reveal-id="myModal" value="仓库全景"  readonly="readonly">
+                            <input class="realView" value="实景地图"  readonly="readonly">
+                            <input class="delivery" data-reveal-id="myModal-delivery" value="物流快递"  readonly="readonly" >
+                        </div>
+                    </div>
+                    <div class="searchList_right fr">
+                        <p class="searchList_title">广东省深圳市福田区华强北仓库出租</p>
+                        <div class="searchList_scoreBox">
+                            <div class="searchList_scoreBox_star fl">
+                                <span class="searchList_scoreBox_starBar">
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                </span>
+                                <span>五星级仓库(百仓网评级)</span>
+                                <span class="searchList_scoreBox_star_q"><i class="icon-question"></i></span>
+                            </div>
+                            <div class="searchList_scoreBox_score fr">
+                                <p class="searchList_scoreBox_score_p">
+                                    <span class="searchList_scoreBox_score_pStar">
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    <i class="icon-star2"></i>
+                                    </span>
+                                    <span>4.7</span>
+                                    <span>用户评分</span>
+                                    <span class="searchList_scoreBox_score_q"><i class="icon-question"></i></span>
+                                </p>
+                                <p class="searchList_scoreBox_score_p2">
+                                    <span>位置<em>4.4</em></span>
+                                    <span>设施<em>4.4</em></span>
+                                    <span>服务<em>4.4</em></span>
+                                    <span>卫生<em>4.4</em></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="searchList_detail">
+                            <div class="searchList_detail_left fl">
+                                <div class="searchList_detail_location">
+                                    <span class="searchList_detail_left_title">仓库位置：</span>
+                                    <span class="searchList_detail_left_info">广东省-深圳市-福田区</span>
+                                </div>
+                                <div class="searchList_detail_goods">
+                                    <span class="searchList_detail_left_title fl">可存货物：</span>
+                                    <div class="goodsBox fl">
+                                        <span>电子产品</span>
+                                        <span>预处理食品</span>
+                                        <span>电子配件</span>
+                                        <p class="goodsBox_more">更多<i class="icon-arrow3"></i></p>
+                                    </div>
+                                </div>
+                                <div class="searchList_detail_workTime">
+                                    <span class="searchList_detail_left_title">工作时间：</span>
+                                    <span class="searchList_detail_left_info">周一到周五 9:00-18:00</span>
+                                </div>
+                                <div class="searchList_detail_serviceTime">
+                                    <span class="searchList_detail_left_title">服务时间：</span>
+                                    <span class="searchList_detail_left_info">24小时（提前23小时）</span>
+                                </div>
+                                <div class="searchList_detail_security">
+                                    <span class="searchList_detail_left_title">安保等级：</span>
+                                    <span class="searchList_detail_left_info">丙二级</span>
+                                </div>
+                            </div>
+                            <div class="searchList_detail_right fr">
+                                <p class="searchList_detail_price">¥<span class="detail_price">3.00</span><em>起</em></p>
+                                <p class="searchList_detail_unit">元/m²/天</p>
+                                <p class="searchList_detail_more">
+                                    <span>其他计费方式</span>
+                                    <i class="icon-arrow3"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="searchList_down">
+                            <div class="searchList_down_left fl">
+                                <p class="searchList_down_left_p fl">
+                                    <i class="icon-empty"></i>
+                                    <span>空仓库</span>
+                                </p>
+                                <p class="searchList_down_left_p fl">
+                                    <i class="icon-love"></i>
+                                    <span>收藏</span>
+                                </p>
+                                <p class="searchList_down_left_p fl">
+                                    <i class="icon-share"></i>
+                                    <span>分享</span>
+                                </p>
+                            </div>
+                            <a href="javascript:void(0)">立即预定</a>
+                            <a href="javascript:void(0)">立即咨询</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+    <div id="myModal" class="reveal-modal">
+        <div class="imgFlash">
+            <div class="imgFlash_big">
+                <div class="imgFlash_target">
+                    <img src="">
+                </div>
+                <span class="prevBtn"></span>
+                <span class="nextBtn"></span>
+            </div>
+            <ul class="imgFlash_small">
+
+            </ul>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <div id="myModal-delivery" class="reveal-modal reveal-modal-delivery">
+        <div class="deliveryBox">
+            <div class="deliveryBox_item">
+                <div class="deliveryBox_title">
+                    <i class="icon-delivery"></i>
+                    <span>合作物流公司</span>
+                </div>
+                <div class="deliveryBox_content">
+                    <ul>
+                        <li class="deliveryBox_company_list"><img src='images/delivery_complany.jpg'></li>
+                        <li class="deliveryBox_company_list"><img src='images/delivery_complany.jpg'></li>
+                        <li class="deliveryBox_company_list"><img src='images/delivery_complany.jpg'></li>
+                        <li class="deliveryBox_company_list"><img src='images/delivery_complany.jpg'></li>
+                        <li class="deliveryBox_company_list"><img src='images/delivery_complany.jpg'></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="deliveryBox_item">
+                <div class="deliveryBox_title">
+                    <i class="icon-delivery"></i>
+                    <span>物流专线（往返）</span>
+                </div>
+                <div class="deliveryBox_content">
+                    <p>广东省境内：广东省境内广东省境内广东省境内广东省境内广东省境内</p>
+                    <p>广东省境外：广东省境内广东省境内广东省境内广东省境内广东省境内广东省境内</p>
+                </div>
+            </div>
+            <div class="deliveryBox_item">
+                <div class="deliveryBox_title">
+                    <i class="icon-delivery"></i>
+                    <span>室内配送网点</span>
+                </div>
+                <div class="deliveryBox_content">
+                    <p>市内配送网点：福田区福田区福田区福田区福田区福田区福田区福田区福田区福田区福田区福田区</p>
+                </div>
+            </div>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+
+</body>
+</html>

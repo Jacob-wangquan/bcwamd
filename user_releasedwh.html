@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-发布的仓库</title>
+    <link rel="stylesheet"  href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font.css">
+</head>
+<body style="background: #f0f0f0">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="../images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="login.html">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="userBox clearfix">
+        <div class="userMenu fl">
+            <p class="userMenu_title">
+                <i class="icon-phone"></i>
+                <span>个人中心</span>
+            </p>
+            <div id="accordion">
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>发布管理</span>
+                </h3>
+                <div class="accordion-item">
+                    <a href="#">发布的仓库</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>我的收藏</span>
+                </h3>
+                <div  class="accordion-item">
+                    <a href="#">收藏的仓库</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>用户信息</span>
+                </h3>
+                <div  class="accordion-item">
+                    <a href="#">我的资料</a>
+                    <a href="#">安全中心</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>消息中心</span>
+                </h3>
+                <div  class="accordion-item">
+                    <a href="#">未读消息</a>
+                    <a href="#">已读消息</a>
+                </div>
+                <h3>
+                    <i class="icon-phone"></i>
+                    <span>账户管理</span>
+                </h3>
+                <div  class="accordion-item">
+                    <a href="#">账户信息</a>
+                    <a href="#">账户充值</a>
+                </div>
+            </div>
+        </div>
+        <div class="userContent fr">
+            <p class="userContent_title">发布的仓库</p>
+            <div class="userContent_box">
+                <ul>
+                    <li class="user_whList">
+                        <div class="user_whList_img fl">
+                            <img src="../images/wh_1.jpg">
+                        </div>
+                        <div class="user_whList_info fl">
+                            <div class="user_whList_info_titleBar clearfix">
+                                <p class="user_whList_info_title fl">广东省深圳市福田区标准库8000平米</p>
+                                <div class="fr">
+                                    <p class="user_whList_star">
+                                        <i class="icon-star2"></i>
+                                        <i class="icon-star2"></i>
+                                        <i class="icon-star2"></i>
+                                        <i class="icon-star2"></i>
+                                        <span>四星级仓库</span>
+                                    </p>
+                                    <p class="user_whList_how">如何提升星级？</p>
+                                </div>
+                            </div>
+                            <p class="user_whList_info_district">区域：<span>广东省--深圳市--福田区</span></p>
+                            <p class="user_whList_info_func">功能：<span>标准库</span><span>冷库</span><span>3C库</span></p>
+                            <p class="user_whList_info_area">可租面积:<span>8000平米</span>总面积:<span>10000平米</span></p>
+                            <p class="user_whList_info_support">配套：<span>办公、联网</span></p>
+                            <p class="user_whList_info_price">价格：<span>3元/m平米/天</span><span class="user_whList_info_change">编辑</span><span class="user_whList_info_know">了解详情</span></p>
+                        </div>
+                        <!--通过审核-->
+                        <div class="user_whList_verify fl">
+                            <img src="../images/user_whList_werify.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jqueryUI.1.10.4.js"></script>
+    <script>
+        $(function () {
+            $( "#accordion" ).accordion();
+        });
+    </script>
+</body>
+</html>

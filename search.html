@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/jquery.vector-map.css">
+    <link rel="stylesheet" href="css/jquery.inputbox.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
+</head>
+<body my-js="js/app/search.js">
+<div class="header height80 clearfix">
+    <div class="headerBox">
+        <div class="header_logo fl">
+            <a href="index.html">
+                <img src="images/logo.png">
+            </a>
+        </div>
+        <div class="header_nav fl">
+            <a class="header_nav_index" href="index.html">首页</a>
+            <a class="header_nav_about" href="about.html">关于我们</a>
+        </div>
+        <div class="header_phone fl">
+            <i class="icon-phone"></i>
+            <span>400-93-10086</span>
+        </div>
+        <div class="header_login fl">
+            <a class="header_loginBtn" href="login.html">登录</a>
+        </div>
+        <div class="header_publish fl">
+            <a class="header_publishBtn" href="#">发布仓库</a>
+        </div>
+        <div class="header_search fl">
+            <a class="header_searchBtn" href="search.html">寻找仓库</a>
+        </div>
+    </div>
+</div>
+
+<div class="banner_search">
+    <div class="bannerBox">
+        <div class="selectBox">
+            <div id="test1" style="float:left;height:200px; padding-left:50px;">
+                <input type="hidden" class="province" value="010000"/>
+                <input type="hidden" class="city" value="010100"/>
+                <input type="hidden" class="area" value="010101"/>
+                <div name="province" type="selectbox" style="z-index:2;">
+                    <div class="opts"></div>
+                </div>
+                <div name="city" type="selectbox" style="z-index:2;">
+                    <div class="opts"></div>
+                </div>
+                <div name="area" type="selectbox" style="z-index:2;">
+                    <div class="opts"></div>
+                </div>
+            </div>
+            <div class="kind fl">
+                <input class="input_select" id="kind"  data-reveal-id="myModal-kind" value="货品种类">
+                <div class="input_arrow"></div>
+            </div>
+            <div class="selectArea fl">
+                <input class="input_select" id="selectArea" data-reveal-id="myModal-area" value="面积/托盘">
+                <div class="input_arrow"></div>
+            </div>
+            <div class="condition_searchBtn fl">
+                <a href="#"><i class="icon-search"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="searchImg">
+    <img src="images/serach-img.jpg">
+</div>
+
+<div class="whMap clearfix">
+    <p class="whMap_title">
+        <i></i>
+        <span>百仓网仓库网点分布图</span>
+    </p>
+    <div class="gradient fl">
+        <p>多</p>
+        <img src="images/gradient_bar.png" class="gradient_bar">
+        <p>少</p>
+    </div>
+    <div class="mapBox fr">
+        <div id="container"></div>
+    </div>
+</div>
+
+<div id="myModal-kind" class="reveal-modal">
+    <div class="insertHere-kind"></div>
+    <div class="submit-kind">确定</div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<div id="myModal-area" class="reveal-modal">
+    <div class="insertHere-area"></div>
+    <div class="submit-area">确定</div>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div class="footer">
+    <div class="footerBox">
+        <a class="footerBox_about" href="#">关于我们</a>
+        <a class="footerBox_help" href="#">帮助</a>
+        <a class="footerBox_join" href="#">加入我们</a>
+        <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+    </div>
+</div>
+</body>
+</html>

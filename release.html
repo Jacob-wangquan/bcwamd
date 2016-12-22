@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布仓库-仓库基本信息</title>
+    <link rel="stylesheet"  href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/jquery.inputbox.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
+</head>
+<body style="background: #f9f7f7;" my-js="js/app/release.js">
+    <div class="header height80 clearfix">
+        <div class="headerBox">
+            <div class="header_logo fl">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="header_nav fl">
+                <a class="header_nav_index" href="index.html">首页</a>
+                <a class="header_nav_about" href="about.html">关于我们</a>
+            </div>
+            <div class="header_phone fl">
+                <i class="icon-phone"></i>
+                <span>400-93-10086</span>
+            </div>
+            <div class="header_login fl">
+                <a class="header_loginBtn" href="#">登录</a>
+            </div>
+            <div class="header_publish fl">
+                <a class="header_publishBtn" href="#">发布仓库</a>
+            </div>
+            <div class="header_search fl">
+                <a class="header_searchBtn" href="search.html">寻找仓库</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="releaseBox">
+        <div class="release_banner">
+            <img src="images/release_banner.png">
+        </div>
+        <div class="release_inputs">
+            <p class="re_title">免费发布仓</p>
+            <p class="re_baseInfo">仓库基本信息</p>
+            <div class="re_content">
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>可存货物</span>
+                    <div class="infoBar_input infoBar_input_goods">
+                        <input class="input_select" id="goods"  data-reveal-id="myModal-goods" value="可存货物">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>仓库类型</span>
+                    <div class="infoBar_input infoBar_input_goods">
+                        <input class="input_select" id="whType"  data-reveal-id="myModal-whType" value="仓库类型">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="infoBar infoBar-area clearfix">
+                    <span class="infoBar_title"><i>*</i>公司区域</span>
+                    <div class="reg_input_area fl">
+                        <div id="test1" style="float:left;height:200px;">
+                            <input type="hidden" class="province" value="010000"/>
+                            <input type="hidden" class="city" value="010100"/>
+                            <input type="hidden" class="area" value="010101"/>
+                            <div name="province" id="province" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="city" id="city" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                            <div name="area" id="area" type="selectbox" style="z-index:2;">
+                                <div class="opts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoBar infoBar-Address clearfix">
+                    <span class="infoBar_title"><i>*</i>详细地址</span>
+                    <div class="infoBar_input">
+                        <input class="input_select" type="text" placeholder="请输入仓库具体地址">
+                    </div>
+                </div>
+                <div class="info_name">
+                    <span class="info_name_left fl">仓管联系方式</span>
+                    <span class="fr"><i class="icon-plus"></i>添加</span>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>联系人</span>
+                    <div class="infoBar_input">
+                        <input class="input_select" type="text" placeholder="请输入">
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>电话</span>
+                    <div class="infoBar_input">
+                        <input class="input_select" type="text" placeholder="请输入">
+                    </div>
+                </div>
+                <div class="info_name">
+                    <span class="info_name_left">货架区</span>
+                    <span class="info_name_if">您是否有可出租的货架区<input class="switch hasFrame" type="checkbox" checked ></span>
+                </div>
+                <!--如果有货架区则显示-->
+                <div class="hasFrame_box">
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>货架层数</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>货架承重</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>货架数量</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择（/仓位）">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>货架尺寸</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择（/厘米）">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info_name">
+                    <span class="info_name_if fl">您是否有子仓库？<input class="switch hasChildWh" type="checkbox" checked ></span>
+                    <span class="fr info_name_icon"><i class="icon-plus"></i>添加子仓库</span>
+                </div>
+                <!--如果有子仓库则显示-->
+                <div class="hasChildWh_box">
+                    <div class="hasChildren">
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>仓库类型</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>货架层数</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>货架承重</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>货架数量</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>仓库尺寸</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_name">
+                    <span class="info_name_left">出租模式</span>
+                    <span class="info_name_if">是否长期出租？<input class="" type="radio"></span>
+                    <!--如果选否，则显示日历可供选择-->
+                    <!--<div class="datePickerBox">开始日期：<input type="text" id="datepicker"></div>-->
+                    <div class="datePickerBox">
+                        <label for="from">从</label>
+                        <input type="text" id="from" name="from">
+                        <label for="to">到</label>
+                        <input type="text" id="to" name="to">
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>起租货架</span>
+                    <div class="infoBar_input">
+                        <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>预计租金</span>
+                    <div class="infoBar_input">
+                        <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>服务费用</span>
+                    <div class="infoBar_input">
+                        <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="infoBar clearfix">
+                    <span class="infoBar_title"><i>*</i>配套设施</span>
+                    <div class="infoBar_input">
+                        <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                        <div class="input_arrow"></div>
+                    </div>
+                </div>
+                <div class="info_name">
+                    <span class="info_name_left">货架区</span>
+                    <span class="info_name_if">是否有可以出租的平面区？<input class="switch hasPlane" type="checkbox" checked></span>
+                </div>
+                <!--如果有可出租的平面区则显示-->
+                <div class="hasPlane_box">
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>可租面积</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                    <div class="infoBar clearfix">
+                        <span class="infoBar_title"><i>*</i>底层承重</span>
+                        <div class="infoBar_input">
+                            <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                            <div class="input_arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_name">
+                    <span class="info_name_if fl">您的平面区是否有子仓库？<input class="switch hasPlaneChildWh" type="checkbox" checked></span>
+                    <span class="fr info_name_icon"><i class="icon-plus"></i>添加子仓库</span>
+                </div>
+                <!--如果平面区有子仓库则显示-->
+                <div class="hasPlaneChildWh_box">
+                    <div class="hasChildren">
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>仓库类型</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>起底承重</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                        <div class="infoBar clearfix">
+                            <span class="infoBar_title"><i>*</i>面积</span>
+                            <div class="infoBar_input">
+                                <input class="input_select"  data-reveal-id="myModal" value="请选择">
+                                <div class="input_arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--备注-->
+                <div class=" infoBar clearfix remark">
+                    <span class="infoBar_title">备注</span>
+                    <div class="infoBar_input">
+                        <input class="input_select input_remark" type="text" placeholder="请输入">
+                    </div>
+                </div>
+
+                <div class="releaseBtn">
+                    <a href="release_next.html">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal-goods" class="reveal-modal">
+        <div class="insertHere-goods"></div>
+        <div class="submit-kind">确定</div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <div id="myModal-whType" class="reveal-modal">
+        <div class="insertHere-whType"></div>
+        <div class="submit-kind">确定</div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div class="footer">
+        <div class="footerBox">
+            <a class="footerBox_about" href="#">关于我们</a>
+            <a class="footerBox_help" href="#">帮助</a>
+            <a class="footerBox_join" href="#">加入我们</a>
+            <p class="footer_copyRight">深圳市前海百仓网供应链有限公司版权所有&nbsp;粤ICP备14063761号-2</p>
+        </div>
+    </div>
+</body>
+</html>
